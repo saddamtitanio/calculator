@@ -6,6 +6,7 @@ void subtract(float x, float y, double *result);
 void multiply(float x, float y, double *result);
 void division(float x, float y,double *result);
 void exponent(float x, float y,double *result);
+void clear(double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
@@ -81,6 +82,7 @@ void operation(int input, float x, float y, double *result) {
         
         /* Clear */
         case 7:
+            clear(result);
             break;
         
         default:
@@ -102,13 +104,17 @@ void multiply(float x, float y, double *result) {
 
 void division(float x, float y,double *result){
     if (y == 0) {
-printf("Cannot divide by 0\n");
-}
-else{
-    *result = x / y;
-}
+        printf("Cannot divide by 0\n");
+    }
+    else{
+        *result = x / y;
+    }
 }
 
 void exponent(float x, float y,double *result){
     *result = pow(x,y);
+}
+
+void clear(double *result) {
+    *result = 0;
 }
