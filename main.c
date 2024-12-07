@@ -1,8 +1,11 @@
 #include <stdio.h>
+#include <math.h>
 
 void add(float x, float y, double *result); 
 void subtract(float x, float y, double *result);
 void multiply(float x, float y, double *result);
+void division(float x, float y,double *result);
+void exponent(float x, float y,double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
@@ -68,10 +71,12 @@ void operation(int input, float x, float y, double *result) {
 
         /* Division */
         case 4:
+            division(x,y, result);
             break;
 
         /* Exponents */
         case 5:
+            exponent(x,y, result);
             break;
         
         /* Clear */
@@ -93,4 +98,17 @@ void subtract(float x, float y, double *result) {
 
 void multiply(float x, float y, double *result) {
     *result = x * y;
+}
+
+void division(float x, float y,double *result){
+    if (y == 0) {
+printf("Cannot divide by 0\n");
+}
+else{
+    *result = x / y;
+}
+}
+
+void exponent(float x, float y,double *result){
+    *result = pow(x,y);
 }
