@@ -1,12 +1,7 @@
 #include <stdio.h>
 #include <math.h>
+#include "function.h"
 
-void add(float x, float y, double *result); 
-void subtract(float x, float y, double *result);
-void multiply(float x, float y, double *result);
-void division(float x, float y,double *result);
-void exponent(float x, float y,double *result);
-void operation(int input, float x, float y, double *result);
 
 int main() {
     int input;
@@ -31,14 +26,24 @@ int main() {
             }
             else {
                 printf("X: ");
-                scanf("%f", &x);
-                isCalculated = 1;
+                if (scanf("%f", &x)) {
+                    isCalculated = 1;
+                }
+                else {
+                    printf("Please enter an integer.\n\n");
+                    while (getchar() != '\n');
+                    continue;
+                }
             }
 
             printf("Y: ");
-            scanf("%f", &y);
+            if (!scanf("%f", &y)) {
+                printf("Please enter an integer.\n\n");
+                while (getchar() != '\n');
+                isCalculated = 0;
+                continue;
+            }
             operation(input, x, y, &result);
-
             printf("Result: %.2lf\n", result);
         }
         else {
@@ -52,63 +57,3 @@ int main() {
     return 0;
 }
 
-void operation(int input, float x, float y, double *result) {
-    switch (input) {
-        /* Addition */
-        case 1:
-            add(x, y, result);
-            break;
-        
-        /* Subtraction */
-        case 2:
-            subtract(x, y, result);
-            break;
-        
-        /* Multiplication */
-        case 3:
-            multiply(x, y, result);
-            break;
-
-        /* Division */
-        case 4:
-            division(x,y, result);
-            break;
-
-        /* Exponents */
-        case 5:
-            exponent(x,y, result);
-            break;
-        
-        /* Clear */
-        case 7:
-            break;
-        
-        default:
-            break;
-    }
-}
-
-void add(float x, float y, double *result) {
-    *result = x + y;
-}
-
-void subtract(float x, float y, double *result) {
-    *result = x - y;
-}
-
-void multiply(float x, float y, double *result) {
-    *result = x * y;
-}
-
-void division(float x, float y,double *result){
-    if (y == 0) {
-printf("Cannot divide by 0\n");
-}
-else{
-    *result = x / y;
-}
-}
-
-void exponent(float x, float y,double *result){
-    *result = pow(x,y);
-}
