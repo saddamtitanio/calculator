@@ -32,14 +32,24 @@ int main() {
             }
             else {
                 printf("X: ");
-                scanf("%f", &x);
-                isCalculated = 1;
+                if (scanf("%f", &x)) {
+                    isCalculated = 1;
+                }
+                else {
+                    printf("Please enter an integer.\n\n");
+                    while (getchar() != '\n');
+                    continue;
+                }
             }
 
             printf("Y: ");
-            scanf("%f", &y);
+            if (!scanf("%f", &y)) {
+                printf("Please enter an integer.\n\n");
+                while (getchar() != '\n');
+                isCalculated = 0;
+                continue;
+            }
             operation(input, x, y, &result);
-
             printf("Result: %.2lf\n", result);
         }
         else {
