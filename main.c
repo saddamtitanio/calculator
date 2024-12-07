@@ -101,7 +101,12 @@ void multiply(float x, float y, double *result) {
 }
 
 void division(float x, float y,double *result){
+    if (y == 0) {
+printf("Cannot divide by 0\n");
+}
+else{
     *result = x / y;
+}
 }
 
 void exponent(float x, float y,double *result){
