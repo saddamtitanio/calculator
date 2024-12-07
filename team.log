@@ -9,3 +9,16 @@ Contribution: Added option to clear current result and set up the boilerplate to
 Author: saddamtitanio <saddam.titanio25@gmail.com>
 Date:   Sat Dec 7 15:38:41 2024 +0700
 Contribution: created the add() function and used function prototypes, changed the data type of the operands to float
+
+Author: Naufalrafiff <naufalrafif0909@gmail.com>
+Date:   Sat Dec 7 17:41:06 2024 +0700
+Contribution: Fix Operation Chaining
+
+Author: Naufalrafiff <naufalrafif0909@gmail.com>
+Date:   Sat Dec 7 17:44:13 2024 +0700
+Contribution: Create Subtract Function
+
+Author: Naufalrafiff <naufalrafif0909@gmail.com>
+Date:   Sat Dec 7 17:45:22 2024 +0700
+Contribution: Create Multiply Function
+

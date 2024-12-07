@@ -1,10 +1,13 @@
 #include <stdio.h>
 
 void add(float x, float y, double *result); 
+void subtract(float x, float y, double *result);
+void multiply(float x, float y, double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
     int input;
+    int isCalculated = 0;
     float x, y;
     double result;
 
@@ -19,10 +22,17 @@ int main() {
 
         /* Input validation */
         if (scanf("%1d", &input) && input >= 1 && input <= 7) {
-            printf("Enter the first number: ");
-            scanf("%f", &x);
+            if (isCalculated) {
+                x = result;
+                printf("X: %.2lf\n", result);
+            }
+            else {
+                printf("X: ");
+                scanf("%f", &x);
+                isCalculated = 1;
+            }
 
-            printf("Enter the second number: ");
+            printf("Y: ");
             scanf("%f", &y);
             operation(input, x, y, &result);
 
@@ -48,10 +58,12 @@ void operation(int input, float x, float y, double *result) {
         
         /* Subtraction */
         case 2:
+            subtract(x, y, result);
             break;
         
         /* Multiplication */
         case 3:
+            multiply(x, y, result);
             break;
 
         /* Division */
@@ -72,5 +84,13 @@ void operation(int input, float x, float y, double *result) {
 }
 
 void add(float x, float y, double *result) {
-    *result += x + y;
+    *result = x + y;
+}
+
+void subtract(float x, float y, double *result) {
+    *result = x - y;
+}
+
+void multiply(float x, float y, double *result) {
+    *result = x * y;
 }
