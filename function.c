@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 void add(float x, float y, double *result) {
     *result = x + y;
 }
@@ -59,10 +58,9 @@ void operation(int input, float x, float y, double *result) {
             break;
         
         /* Clear */
-        case 7:
+        case 6:
             clear(result);
             break;
-        
         default:
             break;
     }
