@@ -16,10 +16,15 @@ int main() {
         printf("5. Exponent (^)\t\t6. Clear\n");
         printf("7. Exit\n");
         
-        printf("Option (1 - 6): ");
+        printf("Option (1 - 7): ");
 
         /* Input validation */
         if (scanf("%1d", &input) && input >= 1 && input <= 7) {
+            if (input == 7) {
+                printf("Exiting program.\n");
+                break;
+            }
+
             if (input != 6) {
                 if (isCalculated) {
                     x = result;
