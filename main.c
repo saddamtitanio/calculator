@@ -3,6 +3,7 @@
 void add(float x, float y, double *result); 
 void subtract(float x, float y, double *result);
 void multiply(float x, float y, double *result);
+void division(float x, float y,double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
@@ -68,6 +69,7 @@ void operation(int input, float x, float y, double *result) {
 
         /* Division */
         case 4:
+            division(x,y, result);
             break;
 
         /* Exponents */
@@ -93,4 +95,8 @@ void subtract(float x, float y, double *result) {
 
 void multiply(float x, float y, double *result) {
     *result = x * y;
+}
+
+void division(float x, float y,double *result){
+    *result = x / y;
 }
