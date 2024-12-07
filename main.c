@@ -20,28 +20,30 @@ int main() {
 
         /* Input validation */
         if (scanf("%1d", &input) && input >= 1 && input <= 7) {
-            if (isCalculated) {
-                x = result;
-                printf("X: %.2lf\n", result);
-            }
-            else {
-                printf("X: ");
-                if (scanf("%f", &x)) {
-                    isCalculated = 1;
+            if (input != 6) {
+                if (isCalculated) {
+                    x = result;
+                    printf("X: %.2lf\n", result);
                 }
                 else {
+                    printf("X: ");
+                    if (scanf("%f", &x)) {
+                        isCalculated = 1;
+                    }
+                    else {
+                        printf("Please enter an integer.\n\n");
+                        while (getchar() != '\n');
+                        continue;
+                    }
+                }
+
+                printf("Y: ");
+                if (!scanf("%f", &y)) {
                     printf("Please enter an integer.\n\n");
                     while (getchar() != '\n');
+                    isCalculated = 0;
                     continue;
                 }
-            }
-
-            printf("Y: ");
-            if (!scanf("%f", &y)) {
-                printf("Please enter an integer.\n\n");
-                while (getchar() != '\n');
-                isCalculated = 0;
-                continue;
             }
             operation(input, x, y, &result);
             printf("Result: %.2lf\n", result);
@@ -56,4 +58,3 @@ int main() {
 
     return 0;
 }
-
