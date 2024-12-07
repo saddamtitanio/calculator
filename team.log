@@ -1,0 +1,11 @@
+Author: saddamtitanio <saddam.titanio25@gmail.com>
+Date: Sat Dec 7 15:12:12 2024 +0700
+Contribution: Initial codebase
+
+Author: saddamtitanio <saddam.titanio25@gmail.com>
+Date: Sat Dec 7 15:21:44 2024 +0700
+Contribution: Added option to clear current result and set up the boilerplate to compartmentalize the operation performed
+
+Author: saddamtitanio <saddam.titanio25@gmail.com>
+Date:   Sat Dec 7 15:38:41 2024 +0700
+Contribution: created the add() function and used function prototypes, changed the data type of the operands to float
