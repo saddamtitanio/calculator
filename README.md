@@ -1,5 +1,5 @@
 # calculator
-Calculator is a console-based calculator that computes mathematical expressions. It supports five basic operations: addition, subtraction, multiplication, division, and exponents.
+Calculator is a console-based program that computes mathematical expressions. It supports five basic operations: addition, subtraction, multiplication, division, and exponents.
 
 ## Usage
 Choose the operation from the provided options and input two valid numbers. 
@@ -9,8 +9,8 @@ Choose the operation from the provided options and input two valid numbers.
 - Compute calculation sequentially (the result of the current calculation is saved in the subsequent calculation).
 
 ## Limitations
-- Only supports five operators ('/', '+', '-', '*').
-- Only two numbers can only be processed in one operation.
+- Only supports five operators ('/', '+', '-', '*', '^).
+- Only two numbers can be processed in one operation.
 
 ## Contributors
 - Saddam Titanio Darmawan: Team Leader
