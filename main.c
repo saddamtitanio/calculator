@@ -2,6 +2,7 @@
 
 void add(float x, float y, double *result); 
 void subtract(float x, float y, double *result);
+void multiply(float x, float y, double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
@@ -62,6 +63,7 @@ void operation(int input, float x, float y, double *result) {
         
         /* Multiplication */
         case 3:
+            multiply(x, y, result);
             break;
 
         /* Division */
@@ -87,4 +89,8 @@ void add(float x, float y, double *result) {
 
 void subtract(float x, float y, double *result) {
     *result = x - y;
+}
+
+void multiply(float x, float y, double *result) {
+    *result = x * y;
 }
