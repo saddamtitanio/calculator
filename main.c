@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 void add(float x, float y, double *result); 
+void subtract(float x, float y, double *result);
 void operation(int input, float x, float y, double *result);
 
 int main() {
@@ -82,4 +83,8 @@ void operation(int input, float x, float y, double *result) {
 
 void add(float x, float y, double *result) {
     *result = x + y;
+}
+
+void subtract(float x, float y, double *result) {
+    *result = x - y;
 }
